@@ -94,3 +94,16 @@ const findEvenNumber = (array)=>{
    console.log(`[${array}], arrays even number is [${evenNumber}]`)
 }
 findEvenNumber([7 , 21 , 44 , 56 , 53 , 98 , 67])
+
+
+
+
+// problem eight
+const capitalizeWord = (sentence)=>{
+    let word = sentence.split(" ")
+    for(let i = 0 ; i < word.length ; i++){
+         word[i] = word[i][0].toUpperCase() + word[i].slice(1)
+    }
+    console.log(`"${sentence}" , after capitalize word = ${word.join(" ")}`)
+}
+capitalizeWord("shariyer shazan")
