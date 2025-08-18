@@ -36,3 +36,16 @@ const checkPalindrome = (string)=>{
 }
 checkPalindrome("mam")
 checkPalindrome("shazan")
+
+
+
+const findMaxNumber = (array)=>{
+    let maxNum = 0
+    for(let i = 0 ; i < array.length ; i++){
+           if(array[i]> maxNum){
+            maxNum = array[i]
+           }
+    }
+    console.log(`${array}, in this array max num is ${maxNum}`)
+}
+findMaxNumber([33, 43 , 29 , 96 , 100 , 120 , 24 , 43])
