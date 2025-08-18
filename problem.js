@@ -26,13 +26,13 @@ countVowel("shazanA")
 
 
 // problem three
-
 const checkPalindrome = (string)=>{
     let reverse = ""
+    const prevString = string
     for(let i = (string.length - 1) ; i>=0 ; i--){
           reverse += string[i] ;
     }
-    console.log(`"${string}", this is a palindrome? ans: ${reverse === string ? true : false}`)
+    console.log(`"${string}", this is a palindrome? ans: ${reverse === prevString ? true : false}`)
 }
 checkPalindrome("mam")
 checkPalindrome("shazan")
