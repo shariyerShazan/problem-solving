@@ -46,6 +46,21 @@ const findMaxNumber = (array)=>{
             maxNum = array[i]
            }
     }
-    console.log(`${array}, in this array max num is ${maxNum}`)
+    console.log(`[${array}], in this array max num is ${maxNum}`)
 }
 findMaxNumber([33, 43 , 29 , 96 , 100 , 120 , 24 , 43])
+
+
+
+
+const removeDuplicareFromArray = (array)=>{
+          const newArray = []
+          for(let i = 0 ; i < array.length ; i++){
+               if(!newArray.includes(array[i])){
+                   newArray.push(array[i])
+               }
+          }
+          console.log(`[${array}], after remove the duplicate array is = [${newArray}]`)
+}
+
+removeDuplicareFromArray([33, 43 , 29 , 33 , 120 , 120 , 24 , 43 , 29])
