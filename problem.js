@@ -39,6 +39,7 @@ checkPalindrome("shazan")
 
 
 
+// problem four
 const findMaxNumber = (array)=>{
     let maxNum = 0
     for(let i = 0 ; i < array.length ; i++){
@@ -53,6 +54,7 @@ findMaxNumber([33, 43 , 29 , 96 , 100 , 120 , 24 , 43])
 
 
 
+// problem five
 const removeDuplicareFromArray = (array)=>{
           const newArray = []
           for(let i = 0 ; i < array.length ; i++){
@@ -62,5 +64,19 @@ const removeDuplicareFromArray = (array)=>{
           }
           console.log(`[${array}], after remove the duplicate array is = [${newArray}]`)
 }
-
 removeDuplicareFromArray([33, 43 , 29 , 33 , 120 , 120 , 24 , 43 , 29])
+
+
+
+
+
+// problem six
+const sumOfNumber = (array)=>{
+    const sum = 0
+    for(let i = 0 ; i < array.length ; i++){
+         sum += array[i]
+   }
+   console.log(`[${array}], sum of this arrays element is = ${sum}`)
+}
+
+sumOfNumber([ 35 , 32 , 50 , 46 , 66 ,49 , 109])
