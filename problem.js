@@ -104,6 +104,18 @@ const capitalizeWord = (sentence)=>{
     for(let i = 0 ; i < word.length ; i++){
          word[i] = word[i][0].toUpperCase() + word[i].slice(1)
     }
-    console.log(`"${sentence}" , after capitalize word = ${word.join(" ")}`)
+    console.log(`"${sentence}" , after capitalize first letter of every word = ${word.join(" ")}`)
 }
 capitalizeWord("shariyer shazan")
+
+
+
+// problem nine
+const factorialOfNumber = (number)=>{
+     let factorial = 1 
+     for(let i = 1 ; i<= number ; i++){
+        factorial *= i
+     }
+     console.log(`factorial of "${number}" is = ${factorial}`)
+}
+factorialOfNumber(5)
