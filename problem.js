@@ -72,7 +72,7 @@ removeDuplicareFromArray([33, 43 , 29 , 33 , 120 , 120 , 24 , 43 , 29])
 
 // problem six
 const sumOfNumber = (array)=>{
-    const sum = 0
+    let sum = 0
     for(let i = 0 ; i < array.length ; i++){
          sum += array[i]
    }
