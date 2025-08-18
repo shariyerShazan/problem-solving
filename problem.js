@@ -80,3 +80,17 @@ const sumOfNumber = (array)=>{
 }
 
 sumOfNumber([ 35 , 32 , 50 , 46 , 66 ,49 , 109])
+
+
+
+// problem seven
+const findEvenNumber = (array)=>{
+    let evenNumber = []
+    for(let i =0 ; i < array.length ; i++){
+        if(array[i] %2 == 0){
+            evenNumber.push(array[i])
+        }
+    }
+   console.log(`[${array}], arrays even number is [${evenNumber}]`)
+}
+findEvenNumber([7 , 21 , 44 , 56 , 53 , 98 , 67])
