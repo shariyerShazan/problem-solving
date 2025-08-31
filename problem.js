@@ -41,6 +41,7 @@ checkPalindrome("shazan")
 
 // MAM  MAM
 
+
 // problem four
 const findMaxNumber = (array)=>{
     let maxNum = 0

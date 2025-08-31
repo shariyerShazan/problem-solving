@@ -1,3 +1,4 @@
+// one
 function twoSumUnique(nums, target) {
   nums.sort((a, b) => a - b); 
   let left = 0, right = nums.length - 1;
@@ -23,3 +24,25 @@ function twoSumUnique(nums, target) {
 
 console.log(twoSumUnique([2,7,11,15,-2,9], 9)); 
 
+
+
+
+// two
+function lengthOfLongestSubstring(s) {
+    let set = new Set();
+    let left = 0, maxLen = 0;
+  
+    for (let right = 0; right < s.length; right++) {
+      while (set.has(s[right])) {
+        set.delete(s[left]);
+        left++;
+      }
+      set.add(s[right]);
+      maxLen = Math.max(maxLen, right - left + 1);
+    }
+  
+    return maxLen;
+  }
+  
+  console.log(lengthOfLongestSubstring("abcabcbb")); 
+  
