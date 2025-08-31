@@ -65,3 +65,28 @@ function groupAnagrams(words) {
   
   console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
   
+
+
+
+
+
+//   four
+function deepClone(obj) {
+    if (obj === null || typeof obj !== "object") return obj;
+  
+    if (Array.isArray(obj)) {
+      return obj.map(item => deepClone(item));
+    }
+  
+    let clone = {};
+    for (let key in obj) {
+      clone[key] = deepClone(obj[key]);
+    }
+    return clone;
+  }
+  
+  let obj = { a: 1, b: { c: 2, d: [3,4] } };
+  let cloned = deepClone(obj);
+  cloned.b.c = 99;
+  console.log(obj.b.c);
+  
