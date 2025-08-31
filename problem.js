@@ -8,20 +8,22 @@ const reverseString= (string)=>{
     console.log(`"${string}" it's reverse is: ${reverse}`)
 }
 reverseString("shazan")
+// nazash
 
 
 // problem two 
 const countVowel = (string)=>{
         let count = 0
-       const vowel = "aeiou"
+       const vowel = "aeiouAEIOU"
        for(let i = 0 ; i< string.length ; i ++){
-           if(vowel.includes(string[i].toLocaleLowerCase())){
+           if(vowel.includes(string[i])){
             count++
            }
        }
        console.log(`"${string}": total vowel is ${count}`)
 }
 countVowel("shazanA")
+// 3
 
 
 
@@ -37,7 +39,7 @@ const checkPalindrome = (string)=>{
 checkPalindrome("mam")
 checkPalindrome("shazan")
 
-
+// MAM  MAM
 
 // problem four
 const findMaxNumber = (array)=>{
@@ -56,7 +58,7 @@ findMaxNumber([33, 43 , 29 , 96 , 100 , 120 , 24 , 43])
 
 // problem five
 const removeDuplicareFromArray = (array)=>{
-          const newArray = []
+          let newArray = []
           for(let i = 0 ; i < array.length ; i++){
                if(!newArray.includes(array[i])){
                    newArray.push(array[i])
