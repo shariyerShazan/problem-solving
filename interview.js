@@ -90,3 +90,21 @@ function deepClone(obj) {
   cloned.b.c = 99;
   console.log(obj.b.c);
   
+
+
+
+//   five 
+function flattenObject(obj, parentKey = "", result = {}) {
+    for (let key in obj) {
+      let newKey = parentKey ? `${parentKey}.${key}` : key;
+      if (typeof obj[key] === "object" && !Array.isArray(obj[key])) {
+        flattenObject(obj[key], newKey, result);
+      } else {
+        result[newKey] = obj[key];
+      }
+    }
+    return result;
+  }
+  
+  console.log(flattenObject({ a: { b: { c: 1 } }, d: 2 }));
+  
