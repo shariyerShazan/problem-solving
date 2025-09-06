@@ -108,3 +108,24 @@ function flattenObject(obj, parentKey = "", result = {}) {
   
   console.log(flattenObject({ a: { b: { c: 1 } }, d: 2 }));
   
+
+
+
+// six
+
+const aramstrongNumber = (num)=>{
+  let numStr = num.toString().split("")
+  let power = numStr.length 
+  let sum = 0
+  for(let i = 0 ; i < power ; i++){
+       const digit = parseInt(numStr[i])
+       sum = sum+ (digit** power)
+  }
+  console.log(sum)
+  if(num == sum){
+    console.log("it's a armstrong number");
+  }else{
+    console.log("not armstrong")
+  }
+}
+aramstrongNumber(154)
