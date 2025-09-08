@@ -1,78 +1,89 @@
-#include<stdio.h>
-int main(){
-while(1){
-    printf("\nPress 1 to check prime within range");
-    printf("\nPress 2 to check perfect within range");
-    printf("\nPress 3 to check palindrome within range");
-    printf("\nPress 4 to exit");
-    int i,n,low,high,rem,rev,f,s,x,c;
-    printf("\nEnter choice = ");
-    scanf("%d",&x);
-    if(x==4){
-        printf("\nThank you!! Goodbye!!");
-        break;
-    }
-    switch(x){
-        case 1:
-            c=0;
+#include <stdio.h>
+
+int main() {
+    while (1) {
+
+        printf("\n Press 1 ➤ Check prime within range");
+        printf("\n Press 2 ➤ Check perfect within range");
+        printf("\n Press 3 ➤ Check palindrome within range");
+        printf("\n Press 4 ➤ Print Diamond");
+        printf("\n Press 5 ➤ Exit");
+
+        int choice;
+        printf("\n\nEnter choice = ");
+        scanf("%d", &choice);
+
+        if (choice == 5) {
+            printf("\nThank you!! Goodbye!!\n");
+            break;
+        }
+
+        int low, high, count = 0;
+
+        if (choice == 1) {
             printf("Enter low and high = ");
-            scanf("%d %d",&low,&high);
-            for(n=low;n<=high;n++){
-                f=0;
-                for(i=2;i<=n/2;i++){
-                    if(n%i==0){
-                        f=1;
+            scanf("%d %d", &low, &high);
+
+            for (int number = low; number <= high; number++) {
+                int isPrime = 1; 
+                if (number < 2) isPrime = 0; 
+                for (int i = 2; i <= number / 2; i++) {
+                    if (number % i == 0) {
+                        isPrime = 0;
                         break;
                     }
                 }
-                if(f==0){
-                    printf("%d ",n);
-                    c++;
+                if (isPrime == 1) {
+                    printf("%d ", number);
+                    count++;
                 }
             }
-            printf("\nTotal = %d\n",c);
-            break;
-        case 2:
-            c=0;
+            printf("\nTotal primes = %d\n", count);
+        } 
+        else if (choice == 2) {
             printf("Enter low and high = ");
-            scanf("%d %d",&low,&high);
-            for(n=low;n<=high;n++){
-                s=0;
-                for(i=1;i<=n/2;i++){
-                    if(n%i==0){
-                        s=s+i;
+            scanf("%d %d", &low, &high);
+
+            for (int number = low; number <= high; number++) {
+                int sumOfDivisors = 0;
+                for (int i = 1; i <= number / 2; i++) {
+                    if (number % i == 0) {
+                        sumOfDivisors += i;
                     }
                 }
-                if(s==n){
-                    printf("%d ",n);
-                    c++;
+                if (sumOfDivisors == number) {
+                    printf("%d ", number);
+                    count++;
                 }
             }
-            printf("\nTotal = %d\n",c);
-            break;
-        case 3:
-            c=0;
+            printf("\nTotal perfect numbers = %d\n", count);
+        } 
+        else if (choice == 3) {
             printf("Enter low and high = ");
-            scanf("%d %d",&low,&high);
-            for(n=low;n<=high;n++){
-                f=n;
-                rev=0;
-                while(f!=0){
-                    rem=f%10;
-                    rev=rev*10+rem;
-                    f=f/10;
+            scanf("%d %d", &low, &high);
 
+            for (int number = low; number <= high; number++) {
+                int original = number;
+                int reverse = 0;
+
+                while (original != 0) {
+                    int digit = original % 10;
+                    reverse = reverse * 10 + digit;
+                    original /= 10;
                 }
-                if(rev==n){
-                    printf("%d ",n);
-                    c++;
+
+                if (reverse == number) {
+                    printf("%d ", number);
+                    count++;
                 }
             }
-            printf("\nTotal = %d\n",c);
-            break;
-        default:
+            printf("\nTotal palindromes = %d\n", count);
+        } 
+       
+        else {
             printf("\nWrong input\n");
-}
-}
-return 0;
+        }
+    }
+
+    return 0;
 }
