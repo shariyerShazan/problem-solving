@@ -79,7 +79,32 @@ int main() {
             }
             printf("\nTotal palindromes = %d\n", count);
         } 
-       
+        else if (choice == 4) {
+            int n;
+            printf("Enter size of diamond = ");
+            scanf("%d", &n);
+
+            printf("\n");
+            for (int i = 1; i <= n; i++) {
+                for (int space = i; space < n; space++) {
+                    printf("  "); 
+                }
+                for (int star = 1; star <= (2 * i - 1); star++) {
+                    printf("♦ ");
+                }
+                printf("\n");
+            }
+
+            for (int i = n - 1; i >= 1; i--) {
+                for (int space = i; space < n; space++) {
+                    printf("  ");
+                }
+                for (int star = 1; star <= (2 * i - 1); star++) {
+                    printf("♦ ");
+                }
+                printf("\n");
+            }
+        }
         else {
             printf("\nWrong input\n");
         }
