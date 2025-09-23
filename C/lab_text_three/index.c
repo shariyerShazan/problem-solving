@@ -73,12 +73,43 @@ void checkPalindrome(char* r) {
 }
 
 
+
+
+// second sort
+void sort(int n) {
+    int a[n]; 
+    int i , j , temp;
+
+    printf("jeta genarate korche: ");
+    for (i = 0; i < n; i++) {
+        a[i] = rand() % 20; 
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    for (i = 0; i < n - 1 ; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (a[j] > a[j + 1]) {
+                   temp = a[j];
+                        a[j] = a[j + 1];
+              a[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("Sorted array: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+
 int main() {
     pattern(5);
     checkPalindrome("abba");
-    // checkPalindrome("papa");
+    checkPalindrome("papa");
 
-
+    sort(10);
     // checkPalindrome("shazan");
     return 0;
 }

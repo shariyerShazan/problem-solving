@@ -16,3 +16,10 @@ int main() {
     printf("ID = %d and Name = %s\n", id, a);
     return 0;
 }
+
+
+
+a = hello
+b = 
+
+a = helloWorld worldhelloWorld
