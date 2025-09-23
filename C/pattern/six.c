@@ -29,7 +29,35 @@ printf("\n");
           }
           printf("\n");
     }
+printf("\n");
 
+
+// print  \ slash
+for(row = 1 ; row <= n ; row++){
+          for(col = 1 ; col <= n ; col++){
+              if(row == col){         
+                      printf("* ");
+              }else{
+                printf("  ");
+            }
+          }
+          printf("\n");
+    }
+printf("\n");
+
+
+
+//  print x
+for(row = 1 ; row <= n ; row++){
+          for(col = 1 ; col <= n ; col++){
+              if(row == col || row+col == n+1){         
+                      printf("* ");
+              }else{
+                printf("  ");
+            }
+          }
+          printf("\n");
+    }
 
     return 0 ;
 }
