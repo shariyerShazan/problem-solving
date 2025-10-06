@@ -79,7 +79,7 @@ void characterFreqShazan(int n) {
 int main() {
     int choice;
     do {
-        printf("\n====== MENU ======\n");
+        printf("\n MENU DRIVEN CODE\n");
         printf("1. Find Strong Numbers in a Range\n");
         printf("2. Insert and Delete from Array\n");
         printf("3. Analyze Strings\n");
