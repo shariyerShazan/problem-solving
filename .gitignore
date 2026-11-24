@@ -1,4 +1,5 @@
-branch_structure.json
-temp_auto_push.bat
-temp_interactive_push.bat
 .gitignore
+
+# env files
+config.bat
+node_modules
